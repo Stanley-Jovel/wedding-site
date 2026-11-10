@@ -1,0 +1,405 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-10T18:34:58.106765+00:00",
+  "title": "Design System: Annika & Stanley",
+  "extensions": {
+    "colorMeta": {
+      "green-700": {
+        "role": "primary",
+        "displayName": "Laurel Green",
+        "canonical": "#3b5646",
+        "tonalRamp": [
+          "#050e08",
+          "#192920",
+          "#31483a",
+          "#4d6958",
+          "#6e8a79",
+          "#92ad9c",
+          "#bbcfc2",
+          "#e4f3e9"
+        ]
+      },
+      "green-800": {
+        "role": "primary",
+        "displayName": "Deep Laurel",
+        "canonical": "#2e4538",
+        "tonalRamp": [
+          "#050d09",
+          "#1b2921",
+          "#33473c",
+          "#50685a",
+          "#70897b",
+          "#95ac9e",
+          "#bccec3",
+          "#e5f2ea"
+        ]
+      },
+      "sage-100": {
+        "role": "secondary",
+        "displayName": "Morning Sage",
+        "canonical": "#e3eae0",
+        "tonalRamp": [
+          "#0a0c09",
+          "#232621",
+          "#3f443d",
+          "#5d635b",
+          "#7e857c",
+          "#a1a79f",
+          "#c6cbc4",
+          "#ecf0eb"
+        ]
+      },
+      "sage-50": {
+        "role": "secondary",
+        "displayName": "Mist Sage",
+        "canonical": "#f3f6f1",
+        "tonalRamp": [
+          "#0a0c09",
+          "#242622",
+          "#40433d",
+          "#5f635c",
+          "#80847d",
+          "#a2a6a0",
+          "#c7cac5",
+          "#edefeb"
+        ]
+      },
+      "sage-200": {
+        "role": "secondary",
+        "displayName": "Pressed Sage",
+        "canonical": "#d3ddcf",
+        "tonalRamp": [
+          "#090c08",
+          "#222720",
+          "#3d453a",
+          "#5c6458",
+          "#7c8679",
+          "#a0a89c",
+          "#c5cbc2",
+          "#ebf0e9"
+        ]
+      },
+      "sage-500": {
+        "role": "secondary",
+        "displayName": "Lichen",
+        "canonical": "#8fa58c",
+        "tonalRamp": [
+          "#070d06",
+          "#1d291b",
+          "#364734",
+          "#536851",
+          "#748971",
+          "#98ac95",
+          "#bfcebd",
+          "#e7f2e6"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Evergreen Ink",
+        "canonical": "#22302a",
+        "tonalRamp": [
+          "#070d0a",
+          "#1e2723",
+          "#384540",
+          "#56655e",
+          "#77877f",
+          "#9aa9a2",
+          "#c1ccc7",
+          "#e8f1ed"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "#4b5b52",
+        "tonalRamp": [
+          "#070d0a",
+          "#1e2822",
+          "#38463e",
+          "#55665d",
+          "#76877d",
+          "#9aaaa0",
+          "#c0cdc5",
+          "#e8f1ec"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#d6ded3",
+        "tonalRamp": [
+          "#0a0c09",
+          "#222621",
+          "#3e443c",
+          "#5d645a",
+          "#7e857b",
+          "#a1a79e",
+          "#c6cbc4",
+          "#ecf0ea"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Garnet",
+        "canonical": "#9b2c2c",
+        "tonalRamp": [
+          "#210000",
+          "#4b0509",
+          "#79181b",
+          "#a43534",
+          "#cb5954",
+          "#ec827b",
+          "#ffb0a8",
+          "#ffddd7"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Script Names",
+        "purpose": "The couple's names in the hero; same face for monogram and footer names. Names only."
+      },
+      "headline": {
+        "displayName": "Page Title",
+        "purpose": "Uppercase engraved page titles, followed by the sprig."
+      },
+      "title": {
+        "displayName": "Section Title",
+        "purpose": "Centered uppercase section titles; hero date in the same voice."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "Sentence-case fact titles, event names, RSVP step titles, long-form h2s."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All reading text at 19px with lining figures; 65ch measure on long-form pages."
+      },
+      "label": {
+        "displayName": "Nav Label",
+        "purpose": "Uppercase tracked primary navigation only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-float",
+        "value": "0 18px 40px -28px rgba(34, 48, 42, 0.35)",
+        "purpose": "RSVP card, the only resting raised surface."
+      },
+      {
+        "name": "popover",
+        "value": "0 12px 32px -12px rgba(34, 48, 42, 0.3)",
+        "purpose": "Add-to-calendar menu."
+      },
+      {
+        "name": "button-hover",
+        "value": "0 6px 18px -8px rgba(34, 48, 42, 0.45)",
+        "purpose": "Primary button hover lift."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "House easing for the hero rise and button state transitions."
+      },
+      {
+        "name": "hero-rise",
+        "value": "1.4s ease-out, from opacity 0.85 and translateY(10px)",
+        "purpose": "The single entrance animation; starts almost visible; off under prefers-reduced-motion."
+      },
+      {
+        "name": "state-transition",
+        "value": "0.25s ease-out",
+        "purpose": "Button background, color, and shadow changes."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "names-stack",
+        "value": "30rem"
+      },
+      {
+        "name": "choices-two-up",
+        "value": "34rem"
+      },
+      {
+        "name": "masthead-compact",
+        "value": "40rem (max)"
+      },
+      {
+        "name": "rsvp-band-row",
+        "value": "52rem"
+      },
+      {
+        "name": "facts-three-up",
+        "value": "60rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Laurel Green pill in sentence case; the main action on any screen (RSVP, Send RSVP).",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">RSVP</a>",
+      "css": ".ds-btn-primary { display:inline-flex; align-items:center; justify-content:center; gap:0.6rem; min-height:3.25rem; padding:0.75rem 1.75rem; border:1px solid var(--green-700, #3b5646); border-radius:999px; font-family: var(--font-body, \"EB Garamond\", Georgia, serif); font-size:1.15rem; letter-spacing:0.02em; text-decoration:none; white-space:nowrap; cursor:pointer; transition: background-color 0.25s cubic-bezier(0.16,1,0.3,1), color 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s cubic-bezier(0.16,1,0.3,1); background:var(--green-700, #3b5646); color:var(--paper, #fff); } .ds-btn-primary:hover { background:var(--green-800, #2e4538); box-shadow:0 6px 18px -8px rgba(34,48,42,0.45); } .ds-btn-primary:focus-visible { outline:2px solid var(--green-700, #3b5646); outline-offset:3px; }"
+    },
+    {
+      "name": "Large Primary Button",
+      "kind": "button",
+      "refersTo": "button-large",
+      "description": "The home page RSVP call beside the countdown.",
+      "html": "<a class=\"ds-btn-large\" href=\"#\">RSVP</a>",
+      "css": ".ds-btn-large { display:inline-flex; align-items:center; justify-content:center; gap:0.6rem; min-height:3.25rem; padding:0.75rem 1.75rem; border:1px solid var(--green-700, #3b5646); border-radius:999px; font-family: var(--font-body, \"EB Garamond\", Georgia, serif); font-size:1.15rem; letter-spacing:0.02em; text-decoration:none; white-space:nowrap; cursor:pointer; transition: background-color 0.25s cubic-bezier(0.16,1,0.3,1), color 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s cubic-bezier(0.16,1,0.3,1); min-height:3.75rem; padding:0.9rem 3.25rem; font-size:1.35rem; background:var(--green-700, #3b5646); color:var(--paper, #fff); } .ds-btn-large:hover { background:var(--green-800, #2e4538); box-shadow:0 6px 18px -8px rgba(34,48,42,0.45); } .ds-btn-large:focus-visible { outline:2px solid var(--green-700, #3b5646); outline-offset:3px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary actions: travel information, maps, add to calendar, change answers.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg>Open in Google Maps</a>",
+      "css": ".ds-btn-outline { display:inline-flex; align-items:center; justify-content:center; gap:0.6rem; min-height:3.25rem; padding:0.75rem 1.75rem; border:1px solid var(--green-700, #3b5646); border-radius:999px; font-family: var(--font-body, \"EB Garamond\", Georgia, serif); font-size:1.15rem; letter-spacing:0.02em; text-decoration:none; white-space:nowrap; cursor:pointer; transition: background-color 0.25s cubic-bezier(0.16,1,0.3,1), color 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s cubic-bezier(0.16,1,0.3,1); background:var(--paper, #fff); color:var(--green-700, #3b5646); } .ds-btn-outline:hover { background:var(--sage-50, #f3f6f1); color:var(--green-800, #2e4538); } .ds-btn-outline:focus-visible { outline:2px solid var(--green-700, #3b5646); outline-offset:3px; }"
+    },
+    {
+      "name": "Language Switch",
+      "kind": "nav",
+      "refersTo": "lang-switch-current",
+      "description": "Segmented ES/EN pill, always visible in the top bar; current language filled.",
+      "html": "<div class=\"ds-lang\" role=\"group\" aria-label=\"Language\"><a class=\"ds-lang-opt\" href=\"#\" lang=\"es\" hreflang=\"es\">ES</a><span class=\"ds-lang-opt ds-is-current\" lang=\"en\" aria-current=\"true\">EN</span></div>",
+      "css": ".ds-lang { display:inline-flex; border:1px solid var(--green-700, #3b5646); border-radius:999px; overflow:hidden; font-family: var(--font-body, \"EB Garamond\", Georgia, serif); } .ds-lang-opt { display:inline-flex; align-items:center; justify-content:center; min-width:3rem; min-height:2.75rem; padding:0 0.75rem; font-size:0.95rem; letter-spacing:0.12em; color:var(--green-700, #3b5646); text-decoration:none; } .ds-is-current { background:var(--green-700, #3b5646); color:var(--paper, #fff); } a.ds-lang-opt:hover { background:var(--sage-100, #e3eae0); } a.ds-lang-opt:focus-visible { outline:2px solid var(--green-700, #3b5646); outline-offset:3px; }"
+    },
+    {
+      "name": "Top Navigation",
+      "kind": "nav",
+      "description": "Centered uppercase labels; current page underlined in Laurel Green; RSVP as an outline pill.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link\" aria-current=\"page\" href=\"#\">Home</a><a class=\"ds-nav-link\" href=\"#\">Schedule</a><a class=\"ds-nav-link\" href=\"#\">Travel</a><a class=\"ds-nav-link ds-nav-rsvp\" href=\"#\">RSVP</a></nav>",
+      "css": ".ds-nav { display:flex; flex-wrap:wrap; justify-content:center; gap:0.25rem 1.75rem; font-family: var(--font-body, \"EB Garamond\", Georgia, serif); } .ds-nav-link { display:inline-flex; align-items:center; min-height:2.75rem; padding:0 0.6rem; font-size:1rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink, #22302a); text-decoration:none; border-bottom:1px solid transparent; } .ds-nav-link:hover { color:var(--green-700, #3b5646); border-bottom-color:var(--sage-500, #8fa58c); } .ds-nav-link[aria-current=\"page\"] { color:var(--green-700, #3b5646); border-bottom-color:var(--green-700, #3b5646); } .ds-nav-rsvp { border:1px solid var(--green-700, #3b5646); border-radius:999px; padding:0 1.1rem; color:var(--green-700, #3b5646); } .ds-nav-rsvp:hover { background:var(--green-700, #3b5646); color:var(--paper, #fff); } .ds-nav-link:focus-visible { outline:2px solid var(--green-700, #3b5646); outline-offset:3px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Large serif field with label and hint above; Garnet border when invalid.",
+      "html": "<label class=\"ds-label\" for=\"ds-name\">Your name</label><p class=\"ds-hint\">As it appears on your invitation.</p><input id=\"ds-name\" class=\"ds-input\" type=\"text\">",
+      "css": ".ds-label { display:block; font-family: var(--font-body, \"EB Garamond\", Georgia, serif); font-size:1.1rem; font-weight:500; color:var(--ink, #22302a); } .ds-hint { margin:0 0 0.5rem; font-family: var(--font-body, \"EB Garamond\", Georgia, serif); font-size:1rem; color:var(--ink-soft, #4b5b52); } .ds-input { width:100%; min-height:3.25rem; padding:0.75rem 1rem; font-family: var(--font-body, \"EB Garamond\", Georgia, serif); font-size:1.15rem; color:var(--ink, #22302a); background:var(--paper, #fff); border:1px solid var(--ink-soft, #4b5b52); border-radius:0.5rem; } .ds-input:focus-visible { outline:2px solid var(--green-700, #3b5646); outline-offset:1px; border-color:var(--green-700, #3b5646); } .ds-input[aria-invalid=\"true\"] { border-color:var(--error, #9b2c2c); }"
+    },
+    {
+      "name": "Choice Row",
+      "kind": "custom",
+      "refersTo": "choice",
+      "description": "Whole-row radio label for each guest's answer; checked rows fill Mist Sage with a Laurel Green border.",
+      "html": "<div class=\"ds-choices\"><label class=\"ds-choice\"><input type=\"radio\" name=\"ds-a\" checked> Joyfully accepts</label><label class=\"ds-choice\"><input type=\"radio\" name=\"ds-a\"> Regretfully declines</label></div>",
+      "css": ".ds-choices { display:grid; gap:0.6rem; } .ds-choice { display:flex; align-items:center; gap:0.75rem; min-height:3.25rem; padding:0.6rem 1rem; border:1px solid var(--rule, #d6ded3); border-radius:0.5rem; cursor:pointer; font-family: var(--font-body, \"EB Garamond\", Georgia, serif); font-size:1.1875rem; color:var(--ink, #22302a); } .ds-choice:hover { border-color:var(--sage-500, #8fa58c); background:var(--sage-50, #f3f6f1); } .ds-choice:has(input:checked) { border-color:var(--green-700, #3b5646); background:var(--sage-50, #f3f6f1); } .ds-choice:has(input:focus-visible) { outline:2px solid var(--green-700, #3b5646); outline-offset:2px; } .ds-choice input { width:1.35rem; height:1.35rem; margin:0; accent-color:var(--green-700, #3b5646); }"
+    },
+    {
+      "name": "RSVP Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "The one raised surface; holds each RSVP step.",
+      "html": "<div class=\"ds-card\"><h2 class=\"ds-card-title\">Your invitation</h2><p class=\"ds-card-sub\">Ana Ramírez · Luis Ramírez</p></div>",
+      "css": ".ds-card { max-width:36rem; padding:clamp(1.5rem,5vw,2.5rem); background:var(--paper, #fff); border:1px solid var(--rule, #d6ded3); border-radius:0.75rem; box-shadow:0 18px 40px -28px rgba(34,48,42,0.35); font-family: var(--font-body, \"EB Garamond\", Georgia, serif); color:var(--ink, #22302a); text-align:center; } .ds-card-title { margin:0; font-size:1.9rem; font-weight:500; line-height:1.15; } .ds-card-sub { margin:0.5rem 0 0; font-size:1.2rem; color:var(--ink-soft, #4b5b52); }"
+    },
+    {
+      "name": "Page Title with Sprig",
+      "kind": "custom",
+      "description": "Uppercase engraved page title with the symmetric botanical sprig beneath.",
+      "html": "<div class=\"ds-title\"><h1>Schedule</h1><svg class=\"ds-sprig\" viewBox=\"0 0 240 48\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 30 C 60 38, 100 38, 120 30 C 140 38, 180 38, 220 30\"/><g><path d=\"M118 30 C 112 18, 102 12, 92 12 C 98 20, 106 27, 118 30 Z\"/><path d=\"M108 33 C 100 27, 90 26, 82 30 C 90 34, 99 35, 108 33 Z\"/><path d=\"M94 34 C 88 22, 76 18, 66 20 C 72 28, 82 33, 94 34 Z\"/><path d=\"M78 35 C 70 31, 60 32, 52 37 C 61 40, 70 39, 78 35 Z\"/><path d=\"M62 34 C 56 24, 46 20, 37 22 C 42 29, 51 33, 62 34 Z\"/><path d=\"M37 31 C 31 31, 26 28, 24 23 C 30 22, 35 25, 37 31 Z\"/><circle cx=\"21\" cy=\"29\" r=\"2.4\"/></g><g transform=\"matrix(-1 0 0 1 240 0)\"><path d=\"M118 30 C 112 18, 102 12, 92 12 C 98 20, 106 27, 118 30 Z\"/><path d=\"M108 33 C 100 27, 90 26, 82 30 C 90 34, 99 35, 108 33 Z\"/><path d=\"M94 34 C 88 22, 76 18, 66 20 C 72 28, 82 33, 94 34 Z\"/><path d=\"M78 35 C 70 31, 60 32, 52 37 C 61 40, 70 39, 78 35 Z\"/><path d=\"M62 34 C 56 24, 46 20, 37 22 C 42 29, 51 33, 62 34 Z\"/><path d=\"M37 31 C 31 31, 26 28, 24 23 C 30 22, 35 25, 37 31 Z\"/><circle cx=\"21\" cy=\"29\" r=\"2.4\"/></g><circle cx=\"120\" cy=\"26\" r=\"2.8\"/></svg></div>",
+      "css": ".ds-title { text-align:center; font-family: var(--font-body, \"EB Garamond\", Georgia, serif); color:var(--ink, #22302a); } .ds-title h1 { margin:0; font-size:3.4rem; font-weight:500; line-height:1.15; letter-spacing:0.12em; text-transform:uppercase; } .ds-sprig { display:block; width:13rem; height:auto; margin:1.25rem auto 0; color:var(--green-700, #3b5646); }"
+    },
+    {
+      "name": "Hero Names",
+      "kind": "custom",
+      "description": "Couple's names in script on the Morning Sage field; the only script use beyond the monogram and footer.",
+      "html": "<div class=\"ds-hero\"><p class=\"ds-names\">Annika <span class=\"ds-amp\">&amp;</span> Stanley</p><p class=\"ds-date\">March 14, 2027</p></div>",
+      "css": ".ds-hero { background:var(--sage-100, #e3eae0); padding:3rem 1.5rem; text-align:center; color:var(--ink, #22302a); animation: ds-rise 1.4s cubic-bezier(0.16,1,0.3,1) both; } .ds-names { margin:0; font-family:var(--font-names, \"Pinyon Script\", cursive); font-size:4.5rem; line-height:1.05; } .ds-amp { color:var(--green-700, #3b5646); padding:0 0.1em; } .ds-date { margin:1rem 0 0; font-family: var(--font-body, \"EB Garamond\", Georgia, serif); font-size:1.6rem; letter-spacing:0.16em; text-transform:uppercase; } @keyframes ds-rise { from { opacity:0.85; transform:translateY(10px); } } @media (prefers-reduced-motion: reduce) { .ds-hero { animation:none; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Engraved Invitation",
+    "overview": "**Creative North Star: \"The Engraved Invitation\"**\n\nA printed wedding invitation carried onto the screen and finished with care. The page is white paper; soft sage fields mark the ceremonial bands (hero, shared-stay notice, footer); deep green-black ink carries every word. Composition is centered and symmetrical, punctuated by a fine botanical sprig and hairline rules. The couple's names are the only thing written by hand, in a flowing script; everything else is set in a classic old-style serif at a generous 19px so every guest, of every age, reads it without effort.\n\nDensity is low and the rhythm is calm: wide bands, one idea per band, large touch targets. Buttons are pills in sentence case. Depth is almost nothing: thin rules and tinted fields do the separating, with a soft shadow kept for the one floating object (the RSVP card) and the one popover (the calendar menu). Spanish and English are equals; the ES/EN switch is never hidden.",
+    "keyCharacteristics": [
+      "White paper ground, sage fields, green-black ink; one green accent.",
+      "Script for the couple's names only; EB Garamond for everything else.",
+      "Centered, ceremonial composition with a symmetric botanical sprig under titles.",
+      "Hairline rules (1px) instead of boxes and shadows.",
+      "Pill buttons in sentence case; large (52-60px) targets.",
+      "Bilingual by construction: ES/EN segmented switch always in the top bar."
+    ],
+    "rules": [
+      {
+        "name": "The One Green Rule",
+        "body": "Laurel Green is the only accent and it always means \"you can act here\". No second accent hue competes with it.",
+        "section": "colors"
+      },
+      {
+        "name": "The Field, Not Fill Rule",
+        "body": "Sage appears as full-width bands and quiet tints, never as button color or text color.",
+        "section": "colors"
+      },
+      {
+        "name": "The Names-Only Script Rule",
+        "body": "Pinyon Script sets the couple's names and their monogram, nothing else. Never a heading, button, or label.",
+        "section": "typography"
+      },
+      {
+        "name": "The 19px Floor Rule",
+        "body": "Body text is 1.1875rem. Secondary text never drops below 0.95rem, and never in a color lighter than Soft Ink.",
+        "section": "typography"
+      },
+      {
+        "name": "The Level Figures Rule",
+        "body": "Numbers use lining figures; countdowns and timeline times use tabular lining figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The Centered Ceremony Rule",
+        "body": "Titles, facts, and calls to action are centered. Only long-form prose, timelines, and form fields run left-aligned.",
+        "section": "layout"
+      },
+      {
+        "name": "The Hairline Rule",
+        "body": "Divide with a 1px Hairline rule or a sage band before reaching for a shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep Laurel Green as the only accent and the only interactive color.",
+      "**Do** set body text at 19px with 1.6 leading and keep secondary text at 0.95rem or larger in Soft Ink.",
+      "**Do** keep both languages one tap away: the ES/EN switch sits in the top bar at every width, marks the current language with `aria-current`, carries `lang` and `hreflang` on each option, and links to the same page in the other language. The document root carries the active `lang`.",
+      "**Do** give every target at least 44px (nav, links, switch) and every button and field at least 52px.",
+      "**Do** show focus as a 2px Laurel Green outline with an offset on everything focusable.",
+      "**Do** separate content with 1px Hairline rules and sage bands.",
+      "**Do** place the sprig under page titles and in the hero and footer.",
+      "**Do** keep buttons in sentence case on a full pill.",
+      "**Do** honor reduced motion; the single hero rise is the only entrance animation."
+    ],
+    "donts": [
+      "**Don't** use the script face for anything but the couple's names and monogram.",
+      "**Don't** set buttons in uppercase or with square corners.",
+      "**Don't** use Lichen or any sage for text.",
+      "**Don't** set small, light gray type.",
+      "**Don't** hide or collapse the language switch into a menu, or ship a half-translated page.",
+      "**Don't** start an entrance animation from invisible.",
+      "**Don't** add new shadows beyond the card float, popover, and button hover.",
+      "**Don't** use stock imagery in the photo slot; leave the sage field until the couple's own photo arrives."
+    ]
+  }
+}

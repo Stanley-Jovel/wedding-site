@@ -1,0 +1,236 @@
+// Spanish copy. DRAFT translated from en.ts; the couple reviews it before launch.
+import type { Dict } from "./en";
+
+export const es: Dict = {
+  meta: {
+    title: "Annika y Stanley · 14 de marzo de 2027",
+    description:
+      "La boda de Annika Katherine Christensen y Luis Stanley Jovel Portal, el 14 de marzo de 2027, en Zaragoza, El Salvador.",
+  },
+  langName: "Español",
+  langShort: "ES",
+  switchLabel: "View in English",
+  skip: "Saltar al contenido",
+  nav: {
+    home: "Inicio",
+    schedule: "Programa",
+    travel: "Viaje",
+    registry: "Regalos",
+    faqs: "Preguntas",
+    rsvp: "Confirmar",
+    label: "Principal",
+  },
+  common: {
+    map: "Mapa",
+    openMap: "Abrir en Google Maps",
+    addToCalendar: "Agregar al calendario",
+    appleOutlook: "Apple / Outlook (.ics)",
+    google: "Google Calendar",
+    rsvpBy: "Por favor confirmen su asistencia antes del 1 de febrero de 2027",
+    rsvpCta: "Confirmar asistencia",
+    mapTitle: "Mapa de Quinta del Pilar, Zaragoza",
+  },
+  home: {
+    groom: "Luis Stanley Jovel Portal",
+    and: "y",
+    bride: "Annika Katherine Christensen",
+    date: "14 de marzo de 2027",
+    place: "Zaragoza, El Salvador",
+    countdown: {
+      label: "Para la ceremonia",
+      days: "días",
+      hours: "horas",
+      minutes: "minutos",
+      seconds: "segundos",
+      today: "¡Hoy es el día!",
+      after: "Gracias por celebrar con nosotros.",
+    },
+    essentialsTitle: "Lo esencial",
+    whenLabel: "Cuándo",
+    when: "Domingo 14 de marzo de 2027",
+    whenDetail: "Llegada de invitados a las 4:30 p. m. La ceremonia comienza a las 5:00 p. m. en punto.",
+    whereLabel: "Dónde",
+    wearLabel: "Vestimenta",
+    wear: "Semiformal. La ceremonia será sobre césped; recomendamos tacón grueso o zapatos bajos. No se permiten jeans.",
+    fullSchedule: "Ver el programa completo",
+    dressDetails: "Detalles de la vestimenta",
+    travelTitle: "¿Vienen desde Estados Unidos?",
+    travelBody:
+      "Dónde hospedarse, cómo llegar de San Salvador a Zaragoza, moneda y propinas, y las casas compartidas para la familia de la novia.",
+    travelCta: "Información de viaje",
+  },
+  schedule: {
+    title: "Programa",
+    day: "Domingo 14 de marzo de 2027",
+    event: "Boda de Annika y Stanley",
+    hours: "4:30 p. m. - 10:00 p. m.",
+    attire:
+      "Les pedimos vestimenta semiformal. La ceremonia será sobre césped; recomendamos tacón grueso o zapatos bajos.",
+    timeline: [
+      { time: "3:00 p. m.", text: "Llega el cortejo nupcial para las fotos antes de la ceremonia" },
+      {
+        time: "4:30 p. m.",
+        text: "Llegada de invitados (si llegan temprano, por favor esperen bajo la glorieta del parqueo para que el cortejo termine sus fotos)",
+      },
+      { time: "5:00 p. m.", text: "Comienza la ceremonia" },
+      { time: "5:45 p. m.", text: "Comienza la recepción" },
+      { time: "10:00 p. m.", text: "Todos los invitados deben retirarse del lugar" },
+    ],
+    saturdayTitle: "El día antes: sábado 13 de marzo",
+    saturdayBody:
+      "Por la mañana, una reunión para hacer los recuerdos de la boda en San Salvador; por la noche, la despedida de solteros. Los detalles están en Preguntas.",
+    saturdayCta: "Leer sobre el sábado",
+  },
+  travel: {
+    title: "Viaje",
+    lede: "Para los invitados que viajan desde Estados Unidos: todo lo que sabemos sobre cómo llegar, dónde hospedarse y cómo moverse.",
+    sections: [
+      {
+        id: "accommodation",
+        title: "Hospedaje",
+        body: [
+          "Recomendamos reservar un Airbnb o Vrbo en la ciudad de San Salvador. El hospedaje en El Salvador es mucho más barato que en Estados Unidos, pero puede ser caro en las zonas más exclusivas. Reservar un apartamento o una casa grande y compartirla con otros reduce mucho los costos.",
+          "Si les interesa que los pongamos en contacto con otros invitados para compartir una reserva, por favor escríbanle a Annika.",
+        ],
+      },
+      {
+        id: "transportation",
+        title: "Transporte",
+        body: [
+          "La boda será en Zaragoza, a unos 20-30 minutos en carro de San Salvador. Manejar es la forma más práctica de moverse, y se puede manejar en El Salvador con licencia de conducir de Estados Unidos.",
+          "Si se quedarán varios días en el país, recomendamos alquilar un carro. Si no, Uber es una opción cómoda y económica.",
+        ],
+      },
+      {
+        id: "currency",
+        title: "Moneda",
+        body: [
+          "La moneda oficial de El Salvador es el dólar estadounidense. Si piensan hacer compras, recomendamos llevar efectivo para vendedores ambulantes e informales. No es costumbre dejar propina.",
+        ],
+      },
+    ],
+    shared: {
+      kicker: "Hospedaje compartido",
+      title: "Hospedaje compartido para la familia de la novia",
+      body: "Reservamos 2 Airbnbs (una villa en la playa del 9 al 12 de marzo y una casa en la ciudad del 12 al 16 de marzo) para que la familia cercana y algunos amigos íntimos de la novia los compartan durante la semana de la boda.",
+      listIntro:
+        "Si están en esta lista, por favor abran el enlace 'Ver' para encontrar toda la información sobre el hospedaje y otros detalles importantes:",
+      names: [
+        "Emma Christensen",
+        "Hannah & Daniel Paget",
+        "Kyle & Jennifer Christensen",
+        "Christopher Hill",
+        "Jim Carroll",
+        "Bryan & Christi Goad",
+        "Emil Haedt & Anthony Cusguen",
+        "Lauren Christenson",
+      ],
+      cta: "Ver",
+      ctaNote: "Abre un documento de Google (en inglés)",
+    },
+  },
+  registry: {
+    title: "Regalos",
+    fundTitle: "Fondo para la luna de miel",
+    body: "Si desean hacernos un regalo, les agradeceríamos una contribución a nuestro fondo para la luna de miel. No esperamos regalos (¡y menos si viajan a El Salvador para la boda!), pero son bienvenidos.",
+    cta: "Ir a nuestra lista en Zola",
+    ctaNote: "Abre zola.com (en inglés)",
+    pending: "Pronto agregaremos aquí el enlace a nuestra lista de regalos.",
+  },
+  faqs: {
+    title: "Preguntas frecuentes",
+    jump: "Preguntas en esta página",
+    items: [
+      {
+        id: "rsvp",
+        q: "¿Hasta cuándo puedo confirmar mi asistencia?",
+        a: ["Hasta el 1 de febrero de 2027."],
+      },
+      {
+        id: "dress-code",
+        q: "¿Hay código de vestimenta?",
+        a: [
+          "Les pedimos vestimenta semiformal.",
+          "Es decir: vestidos a la rodilla o midi, enterizos o trajes de pantalón en una tela elegante; camisa de botones y pantalón de vestir (corbata y saco opcionales); zapatos formales como mocasines, oxfords, tenis de cuero formales, tacones o bailarinas. La ceremonia y la recepción serán sobre césped, así que recomendamos tacón grueso o zapatos bajos.",
+          "En marzo, en El Salvador, la temperatura va de 21 a 32 °C (70-90 °F), con humedad moderada a alta. Casi no hay probabilidad de lluvia.",
+          "Los colores del cortejo nupcial son blanco y verde. Por favor ténganlo en cuenta al elegir su atuendo, para que el cortejo resalte.",
+          "No se permiten jeans.",
+        ],
+      },
+      {
+        id: "registry",
+        q: "¿Tienen lista de regalos? ¿Dónde?",
+        a: [
+          "Si desean hacernos un regalo, les agradeceríamos una contribución a nuestro fondo para la luna de miel. Pueden hacerlo desde la sección 'Regalos' de este sitio. Los regalos no son necesarios, ¡y menos si viajan a El Salvador!",
+        ],
+      },
+      {
+        id: "saturday",
+        q: "¿Hay otros eventos alrededor de la boda?",
+        a: [
+          "Habrá dos eventos el sábado 13 de marzo (el día antes de la boda):",
+          "Por la mañana, una reunión opcional para hacer los recuerdos de la boda en San Salvador. Si les interesa participar, por favor contacten a Jennifer Christensen{jennifer}.",
+          "Por la noche, la despedida de solteros de Stanley y Annika, para sus amigos cercanos y hermanos. Para más información, contacten a Emma Christensen{emma}.",
+        ],
+      },
+      {
+        id: "parking",
+        q: "¿Hay parqueo para la ceremonia y la recepción?",
+        a: [
+          "Sí. Habrá un rótulo en la calle y una persona que les guiará hacia el lugar y les ayudará a parquearse. Después de parquearse, caminen de regreso hacia la entrada de carros para encontrar la puerta de la ceremonia.",
+          "Uber también es una opción cómoda y económica en El Salvador.",
+        ],
+      },
+      {
+        id: "arrival",
+        q: "¿A qué hora debo llegar a la ceremonia?",
+        a: ["Por favor lleguen a las 4:30 p. m. La ceremonia comenzará a las 5:00 p. m. en punto."],
+      },
+    ],
+    phonePrefix: " al ",
+    phonePending: " (pronto agregaremos su teléfono)",
+  },
+  rsvp: {
+    title: "Confirmar asistencia",
+    lede: "Por favor respondan antes del 1 de febrero de 2027. Busquen su invitación escribiendo su nombre tal como aparece en ella.",
+    findLabel: "Su nombre completo",
+    findHint: "Nombre y apellido, por ejemplo: Emma Christensen",
+    findCta: "Buscar mi invitación",
+    finding: "Buscando…",
+    notFound:
+      "No encontramos ese nombre. Intenten con su nombre y apellido tal como aparecen en la invitación, o escríbanle a Annika o a Stanley y lo resolvemos.",
+    tooShort: "Por favor escriban su nombre y apellido.",
+    pickOne: "Encontramos más de una invitación. ¿Cuál es la suya?",
+    notYou: "¿No son ustedes? Buscar de nuevo",
+    householdTitle: "Su invitación",
+    attendingQ: "¿Asistirá {name}?",
+    yes: "Con gusto asistirá",
+    no: "Lamentablemente no podrá asistir",
+    dietaryLabel: "Restricciones alimentarias o alergias",
+    dietaryHint: "Opcional. Indíquenlo por persona si ayuda.",
+    saturdayLabel:
+      "Nos interesa la reunión opcional para hacer recuerdos el sábado 13 de marzo por la mañana, en San Salvador",
+    noteLabel: "Un mensaje para Annika y Stanley",
+    noteHint: "Opcional",
+    submit: "Enviar respuesta",
+    sending: "Enviando…",
+    missingAnswer: "Por favor respondan por cada persona de la invitación.",
+    missingFor: "Por favor elijan una respuesta para: {names}.",
+    answerThis: "Por favor elijan una opción.",
+    already:
+      "Ya respondieron el {date}. Si envían de nuevo, se reemplazará su respuesta anterior.",
+    successTitle: "¡Gracias!",
+    successYes: "Recibimos su confirmación. Nos hace mucha ilusión celebrar con ustedes el 14 de marzo.",
+    successNo: "Recibimos su respuesta. Les vamos a extrañar; gracias por avisarnos.",
+    changeAnswer: "Cambiar mi respuesta",
+    error:
+      "Algo salió mal y su respuesta no se envió. Por favor intenten de nuevo en un momento. Si sigue pasando, escríbanle a Annika o a Stanley.",
+    closed:
+      "La confirmación cerró el 1 de febrero de 2027. Si necesitan cambiar su respuesta, por favor contacten directamente a Annika o a Stanley.",
+    notConfigured: "La confirmación en línea aún no está abierta. Vuelvan a revisar pronto.",
+    devNotice: "Modo de desarrollo: invitados de ejemplo; las respuestas no se guardan.",
+  },
+  footer: {
+    line: "Annika Katherine y Luis Stanley · 14 de marzo de 2027 · Zaragoza, El Salvador",
+  },
+};

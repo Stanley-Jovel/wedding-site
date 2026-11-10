@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Annika and Stanley//Wedding//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:annika-stanley-wedding-20270314@wedding
+DTSTAMP:20261110T000000Z
+DTSTART:20270314T223000Z
+DTEND:20270315T040000Z
+SUMMARY:Annika + Stanley's Wedding
+LOCATION:Quinta del Pilar\, Avenida Monseñor Oscar Arnulfo Romero\, Casa #2\, Zaragoza\, El Salvador
+DESCRIPTION:Guests arrive 4:30 pm. Ceremony 5:00 pm sharp. Semi-formal attire. / Llegada 4:30 p. m. Ceremonia 5:00 p. m. en punto. Vestimenta semiformal.
+END:VEVENT
+END:VCALENDAR
