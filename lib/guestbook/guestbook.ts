@@ -323,7 +323,7 @@ export function createGuestBook({ store, deadline, baseUrl, now = () => new Date
     const saturday = reply.saturday ? "Yes" : "No";
     const updates: CellUpdate[] = [];
     const log: string[][] = [];
-    const set = (r: Row, key: ColumnKey, value: string) => updates.push({ row: r.abs, col: r.col[key]!, value });
+    const set = (r: Row, key: ColumnKey, value: string | number) => updates.push({ row: r.abs, col: r.col[key]!, value });
 
     for (const r of rows) {
       const name = r.get("name");
@@ -352,7 +352,7 @@ export function createGuestBook({ store, deadline, baseUrl, now = () => new Date
         const coming = slots.filter((s) => s.attending === "yes");
         // Attending plus-ones first, so the count and the names line up on the next read.
         const ordered = [...coming, ...slots.filter((s) => s.attending === "no")];
-        set(r, "plusComing", String(coming.length));
+        set(r, "plusComing", coming.length);
         set(r, "plusNames", ordered.map((s) => s.name).filter(Boolean).join(", "));
       }
 

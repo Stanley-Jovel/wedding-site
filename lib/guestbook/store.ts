@@ -14,8 +14,8 @@ export type TableData = {
   rows: string[][];
 };
 
-/** A single cell on the Guest List tab, absolute 0-based coordinates. */
-export type CellUpdate = { row: number; col: number; value: string };
+/** A single cell on the Guest List tab, absolute 0-based coordinates. Numbers stay numbers so sheet totals can SUM them. */
+export type CellUpdate = { row: number; col: number; value: string | number };
 
 export interface SheetStore {
   readTables(): Promise<TableData[]>;
@@ -30,6 +30,8 @@ export class MemoryStore implements SheetStore {
   grid: string[][];
   tables: TableRange[];
   log: string[][] = [];
+  /** Every batch of cell writes, as sent (for tests). */
+  writes: CellUpdate[][] = [];
 
   constructor(grid: string[][], tables: TableRange[]) {
     this.grid = grid.map((r) => [...r]);
@@ -51,11 +53,12 @@ export class MemoryStore implements SheetStore {
   }
 
   async writeCells(updates: CellUpdate[]) {
+    this.writes.push(updates.map((u) => ({ ...u })));
     for (const u of updates) {
       while (this.grid.length <= u.row) this.grid.push([]);
       const row = this.grid[u.row];
       while (row.length <= u.col) row.push("");
-      row[u.col] = u.value;
+      row[u.col] = String(u.value);
     }
   }
 

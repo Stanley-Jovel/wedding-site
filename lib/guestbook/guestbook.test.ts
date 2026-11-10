@@ -223,6 +223,9 @@ describe("submit", () => {
     const c = (h: string) => cell(store, "Juan Carlos Méndez", h);
     expect(c("Status")).toBe("Yes");
     expect(c("Plus-ones coming")).toBe("1");
+    // Sent to the sheet as a number, so the totals' SUM counts it.
+    const write = store.writes.flat().find((u) => u.value === 1);
+    expect(write).toBeDefined();
     expect(c("Name +1")).toBe("Beto, Lucía");
     expect(c("Dietary restrictions")).toBe("sin gluten; Beto: vegetariano");
     expect(c("Answered")).toBe("2026-12-01");
