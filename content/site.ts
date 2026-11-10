@@ -1,6 +1,8 @@
 // Facts shared by both languages. Fill the nulls when the couple supplies them.
 
 export const site = {
+  // Live address; personal RSVP links in the guest sheet are built from it.
+  url: "https://annikachristensen.stanleyjovel.com",
   // Ceremony start, El Salvador time (UTC-6, no daylight saving).
   ceremonyStart: "2027-03-14T17:00:00-06:00",
   // RSVPs close at the end of February 1, 2027, El Salvador time.

@@ -12,7 +12,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000. Without Google Sheets settings, the RSVP page runs in **development mode**: it uses sample guests (Ana Martínez, Jordan Sample, Ana Ramírez…) and saves nothing.
+Open http://localhost:3000. Without Google Sheets settings, the RSVP page runs in **development mode** with fictional sample guests; see below.
 
 ## Where to edit things
 
@@ -35,21 +35,49 @@ Open http://localhost:3000. Without Google Sheets settings, the RSVP page runs i
 
   Until a slot has a photo, it shows a labeled placeholder. Set `showPhotoPlaceholders: false` to hide empty slots before launch.
 
-## Set up RSVPs with Google Sheets
+## RSVPs: your "Guest List" sheet
 
-1. **Create the spreadsheet** with two tabs, named exactly:
-   - `Guests` with headers in row 1: `Household ID` | `Guest name`. Add one row per invited person; people in the same household share an ID (for example `H001`).
-   - `RSVPs` with headers in row 1: `Timestamp` | `Household ID` | `Guest name` | `Attending` | `Dietary` | `Saturday crafting` | `Note` | `Language`. The site adds rows here. If a household replies twice, the newest rows are their current answer.
-2. **Create a service account** in [Google Cloud Console](https://console.cloud.google.com/): create a project, enable the **Google Sheets API**, then go to *IAM & Admin → Service Accounts → Create*. Open it, choose *Keys → Add key → JSON*, and download the file.
-3. **Share the spreadsheet** with the service account's email (it ends in `iam.gserviceaccount.com`) as an **Editor**.
-4. **Add three environment variables** (see `.env.example`):
+The RSVP runs on your existing Google Sheet, on the **Guest List** tab, which holds the **Stanley Guests** and **Annika Guests** tables. The site finds each table by name and each column by its header, so you can reorder columns and sort rows freely. Just don't rename these headers.
+
+**Columns the site reads and writes, in both tables:**
+
+| Column | Who fills it | What it means |
+| --- | --- | --- |
+| Name | You | One person per row |
+| Status | Site (Yes / No) | Your own Maybe / Probably no stays until the guest replies |
+| Plus One? | You | How many guests this person may bring. Blank or 0 means none |
+| Name +1 | You, then the site | Known names, comma separated. `???` means "ask the guest" |
+| Dietary restrictions | Site | The person's own needs, then `Name: needs` for their plus-ones |
+| Invite code | You or the site | Rows with the same code are one invitation. Leave it blank and the site fills in a random code |
+| Link | Site | The personal link to send. It opens in Spanish for Stanley's side and English for Annika's |
+| Answered | Site | Date of the latest reply |
+| Plus-ones coming | Site | How many of this row's plus-ones are coming |
+| Saturday crafting | Site | Yes / No for the whole invitation |
+| Note to couple | Site | The guest's message |
+| Language | You (optional) | `es` or `en` to override the side's language |
+
+Every reply is also added to the **RSVP log** tab (Timestamp, Invite code, Side, Guest name, Role, Attending, Plus-one name, Dietary, Saturday crafting, Note, Language), so nothing is lost if a cell is edited by mistake.
+
+Guests open their personal link, or search by any of their names on the RSVP page. They can change their answers until February 1, 2027 (El Salvador time). After that their page shows their answers read-only.
+
+### Connect the sheet
+
+1. Create a service account in [Google Cloud Console](https://console.cloud.google.com/): create a project, enable the **Google Sheets API**, then go to *IAM & Admin → Service Accounts → Create*. Open it, choose *Keys → Add key → JSON*, and download the file.
+2. Share your guest spreadsheet with the service account's email (it ends in `iam.gserviceaccount.com`) as an **Editor**.
+3. Add three environment variables (see `.env.example`):
    - `GOOGLE_SHEET_ID`: the long ID in the sheet's URL, between `/d/` and `/edit`
    - `GOOGLE_SERVICE_ACCOUNT_EMAIL`: `client_email` from the JSON file
    - `GOOGLE_PRIVATE_KEY`: `private_key` from the JSON file
 
    For local testing, put them in `.env.local`. For the live site, add them in Vercel under *Project → Settings → Environment Variables*, then redeploy.
 
-Guests search by first and last name (accents and capitals don't matter). RSVPs close automatically after February 1, 2027 (El Salvador time).
+Without these settings, `npm run dev` uses fictional sample guests kept in memory (try "Juan Carlos Méndez" or "Amy Wright"), and the live site says RSVPs aren't open yet.
+
+### Tests
+
+```bash
+npm test
+```
 
 ## Deploy on Vercel (free)
 

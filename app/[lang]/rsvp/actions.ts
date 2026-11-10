@@ -1,80 +1,54 @@
 "use server";
 
-import { site } from "@/content/site";
-import { allHouseholds, lastReply, matchHouseholds, mode, saveReplies } from "@/lib/guests";
+import { guestBook } from "@/lib/guestbook";
+import { SheetFormatError, type Reply, type SearchResult, type SubmitResult, type YesNo } from "@/lib/guestbook/guestbook";
 
-export type FoundHousehold = { id: string; members: string[]; repliedAt: string | null };
+type Unavailable = { status: "not-configured" | "error" };
 
-export type LookupResult =
-  | { status: "found"; households: FoundHousehold[] }
-  | { status: "not-found" | "too-short" | "closed" | "not-configured" | "error" };
-
-function isClosed() {
-  return Date.now() > new Date(site.rsvpDeadline).getTime();
-}
-
-export async function lookupHousehold(query: string): Promise<LookupResult> {
-  if (isClosed()) return { status: "closed" };
-  if (mode() === "off") return { status: "not-configured" };
-  const q = query.trim().slice(0, 120);
-  if (q.split(/\s+/).filter(Boolean).length < 2) return { status: "too-short" };
+export async function searchInvitations(query: string): Promise<SearchResult | Unavailable> {
+  const book = guestBook();
+  if (!book) return { status: "not-configured" };
   try {
-    // Cap the matches so a vague search can't list the whole guest list.
-    const matches = matchHouseholds(await allHouseholds(), q).slice(0, 4);
-    if (matches.length === 0) return { status: "not-found" };
-    const households = await Promise.all(
-      matches.map(async (h) => ({ ...h, repliedAt: await lastReply(h.id) })),
-    );
-    return { status: "found", households };
+    return await book.search(String(query ?? ""));
   } catch (err) {
-    console.error("[rsvp] lookup failed", err);
+    console.error("[rsvp] search failed", err);
     return { status: "error" };
   }
 }
 
-export type SubmitInput = {
-  householdId: string;
-  answers: Record<string, "yes" | "no">;
-  dietary: string;
-  saturday: boolean;
-  note: string;
-  lang: string;
-};
+const yesNo = (v: unknown): YesNo | null => (v === "yes" || v === "no" ? v : null);
+const text = (v: unknown) => (typeof v === "string" ? v : "");
+const entries = (v: unknown) => (v && typeof v === "object" ? Object.entries(v as Record<string, unknown>) : []);
 
-export type SubmitResult =
-  | { status: "saved"; anyAttending: boolean }
-  | { status: "missing" | "closed" | "not-configured" | "error" };
-
-export async function submitRsvp(input: SubmitInput): Promise<SubmitResult> {
-  if (isClosed()) return { status: "closed" };
-  if (mode() === "off") return { status: "not-configured" };
-  try {
-    const household = (await allHouseholds()).find((h) => h.id === input.householdId);
-    if (!household) return { status: "error" };
-    // Only the people on this invitation can be answered for, and all of them must be.
-    if (household.members.some((m) => input.answers[m] !== "yes" && input.answers[m] !== "no")) {
-      return { status: "missing" };
-    }
-    const dietary = input.dietary.trim().slice(0, 500);
-    const note = input.note.trim().slice(0, 1000);
-    await saveReplies(
-      household.members.map((name) => ({
-        householdId: household.id,
-        name,
-        attending: input.answers[name] === "yes",
-        dietary,
-        saturday: input.saturday,
-        note,
-        lang: input.lang === "en" ? "en" : "es",
-      })),
-    );
-    return { status: "saved", anyAttending: household.members.some((m) => input.answers[m] === "yes") };
-  } catch (err) {
-    console.error("[rsvp] submit failed", err);
-    return { status: "error" };
-  }
+// The browser sends this; rebuild it so only expected fields and types reach the sheet.
+function clean(raw: unknown): Reply {
+  const r = (raw ?? {}) as Record<string, unknown>;
+  return {
+    people: Object.fromEntries(
+      entries(r.people).map(([name, a]) => {
+        const v = (a ?? {}) as Record<string, unknown>;
+        return [name, { attending: yesNo(v.attending), dietary: text(v.dietary) }];
+      }),
+    ),
+    plusOnes: Object.fromEntries(
+      entries(r.plusOnes).map(([key, a]) => {
+        const v = (a ?? {}) as Record<string, unknown>;
+        return [key, { attending: yesNo(v.attending), name: text(v.name), dietary: text(v.dietary) }];
+      }),
+    ),
+    saturday: r.saturday === true,
+    note: text(r.note),
+    lang: r.lang === "en" ? "en" : "es",
+  };
 }
 
-export async function rsvpMode() {
-  return mode();
+export async function sendReply(code: string, reply: Reply): Promise<SubmitResult | Unavailable> {
+  const book = guestBook();
+  if (!book) return { status: "not-configured" };
+  try {
+    return await book.submit(String(code ?? ""), clean(reply));
+  } catch (err) {
+    console.error("[rsvp] submit failed", err instanceof SheetFormatError ? err.message : err);
+    return { status: "error" };
+  }
 }

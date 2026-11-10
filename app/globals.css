@@ -1194,6 +1194,12 @@ a.lang-opt:hover {
   cursor: pointer;
 }
 
+a.pick {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 .pick:hover {
   border-color: var(--green-700);
   background: var(--sage-50);
@@ -1211,6 +1217,42 @@ a.lang-opt:hover {
 
 .done-mark {
   color: var(--green-700);
+}
+
+.rsvp-person {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.rsvp-person + .rsvp-person {
+  margin-top: 0.5rem;
+}
+
+.plus-group {
+  margin-top: 1.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--sage-200);
+}
+
+.sub-field {
+  margin: -0.5rem 0 1.5rem;
+}
+
+.sub-field .field-label {
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+
+.reply-summary {
+  margin: 1.25rem 0 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.reply-date {
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .dev-notice {
